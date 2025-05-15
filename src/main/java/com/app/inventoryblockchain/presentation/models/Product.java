@@ -11,8 +11,8 @@ public class Product {
 
     }
 
-    public Product(long id, double price, int threshold, int quantity, String name) {
-        this.id = id;
+    public Product(double price, int threshold, int quantity, String name) {
+        this.id = 0;
         this.price = price;
         this.threshold = threshold;
         this.quantity = quantity;

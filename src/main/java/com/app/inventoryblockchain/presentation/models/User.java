@@ -10,9 +10,9 @@ public class User {
 
     public User() {}
 
-    public User(String lastName, long id, Role role, String firstName, String login, String password) {
+    public User(String lastName, Role role, String firstName, String login, String password) {
         this.lastName = lastName;
-        this.id = id;
+        this.id = 0;
         this.role = role;
         this.firstName = firstName;
         this.login = login;

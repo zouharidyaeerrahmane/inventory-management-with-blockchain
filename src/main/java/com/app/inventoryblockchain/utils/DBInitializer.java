@@ -1,10 +1,12 @@
 package com.app.inventoryblockchain.utils;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class DBInitializer {
+public class
+DBInitializer {
 
     public static void initialize() {
         try (Connection conn = DatabaseConnection.getConnection();
@@ -51,8 +53,8 @@ public class DBInitializer {
 
             System.out.println("Database tables created successfully (if not already exist).");
 
-        } catch (Exception e) {
-            System.err.println("Error initializing database: " + e.getMessage());
+        } catch (SQLException e) {
+            throw  new RuntimeException("Error initializing database: " + e.getMessage());
         }
     }
 }
