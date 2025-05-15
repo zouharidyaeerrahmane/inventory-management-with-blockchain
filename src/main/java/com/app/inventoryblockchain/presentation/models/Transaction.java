@@ -1,6 +1,7 @@
 package com.app.inventoryblockchain.presentation.models;
 
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
 
 public class Transaction {
@@ -9,6 +10,9 @@ public class Transaction {
     private LocalDate date;
     private Produit produit;
     private int quantite;
+    private String hash;
+    private String previousHash;
+    private Timestamp timestamp;
     private Utilisateur utilisateur;
 
 
