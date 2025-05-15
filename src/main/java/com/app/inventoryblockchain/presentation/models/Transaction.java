@@ -1,6 +1,5 @@
 package com.app.inventoryblockchain.presentation.models;
 
-
 import java.sql.Timestamp;
 import java.time.LocalDate;
 
@@ -8,23 +7,46 @@ public class Transaction {
     private long id;
     private Type type;
     private LocalDate date;
-    private Produit produit;
-    private int quantite;
+    private Product product;
+    private int quantity;
     private String hash;
     private String previousHash;
     private Timestamp timestamp;
-    private Utilisateur utilisateur;
+    private User user;
 
+    public String getHash() {
+        return hash;
+    }
+
+    public void setHash(String hash) {
+        this.hash = hash;
+    }
+
+    public String getPreviousHash() {
+        return previousHash;
+    }
+
+    public void setPreviousHash(String previousHash) {
+        this.previousHash = previousHash;
+    }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public Transaction() {}
 
-    public Transaction(long id, Type type, LocalDate date, Produit produit, int quantite, Utilisateur utilisateur) {
+    public Transaction(long id, Type type, LocalDate date, Product product, int quantity, User user) {
         this.id = id;
         this.type = type;
         this.date = date;
-        this.produit = produit;
-        this.quantite = quantite;
-        this.utilisateur = utilisateur;
+        this.product = product;
+        this.quantity = quantity;
+        this.user = user;
     }
 
     public Type getType() {
@@ -51,27 +73,27 @@ public class Transaction {
         this.date = date;
     }
 
-    public Produit getProduit() {
-        return produit;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProduit(Produit produit) {
-        this.produit = produit;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    public int getQuantite() {
-        return quantite;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public Utilisateur getUtilisateur() {
-        return utilisateur;
+    public User getUser() {
+        return user;
     }
 
-    public void setUtilisateur(Utilisateur utilisateur) {
-        this.utilisateur = utilisateur;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

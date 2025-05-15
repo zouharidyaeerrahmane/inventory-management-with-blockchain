@@ -1,5 +1,6 @@
 package com.app.inventoryblockchain;
 
+import com.app.inventoryblockchain.utils.DBInitializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,6 +19,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        DBInitializer.initialize();
         launch();
     }
 }

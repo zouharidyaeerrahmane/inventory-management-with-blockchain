@@ -1,4 +1,4 @@
 package com.app.inventoryblockchain.dto;
 
-public class TransactionDTO {
-}
+public class UserDTO {
+} 
